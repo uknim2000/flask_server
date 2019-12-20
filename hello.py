@@ -72,7 +72,7 @@ def pong():
 
 #로또번호 가져와서 보여주는 서버
 
-@app route('/lotto_result/<int:round>')
+@app.route('/lotto_result/<int:round>')
 def lotto_result(round):
     url = f'https://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo={round}'
     result = requests.get(url).json()
